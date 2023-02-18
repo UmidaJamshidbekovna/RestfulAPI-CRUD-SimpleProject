@@ -47,9 +47,9 @@ app.put('/api/categories/:id', (req, res) => {
    if(!category)
         return res.status(404).send('Berilgan Category listdan topilmadi!')
 
-    const {error} = validateCategory(req.body)
-    if(error)
-        return res.status(400).send(error.details[0].message)
+    // const {error} = validateCategory(req.body)
+    // if(error)
+    //     return res.status(400).send(error.details[0].message)
         
     category.name = req.body.name
     res.send(category)
